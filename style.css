@@ -1,0 +1,361 @@
+/* Gaya FotokitaBleUr — dibuat menyesuaikan referensi poster yang dikirim. */
+:root {
+  --ink: #080808;
+  --paper: #ffffff;
+  --category-gray: #686868;
+  --page-gutter: 6.4%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.site-header {
+  min-height: clamp(100px, 10.8vw, 196px);
+  padding: 22px var(--page-gutter);
+  border-bottom: 2px solid var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-mark {
+  display: inline-flex;
+  width: clamp(62px, 6.5vw, 118px);
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand-mark svg,
+.small-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  fill: var(--paper);
+  stroke: var(--ink);
+  stroke-width: 2.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.brand-mark .aperture,
+.small-logo .aperture {
+  fill: var(--ink);
+}
+
+.brand-mark .blade,
+.small-logo .blade {
+  fill: var(--paper);
+  stroke-width: 1.2;
+}
+
+.header-name {
+  font-size: clamp(22px, 2.1vw, 38px);
+  line-height: 1.23;
+  font-weight: 400;
+}
+
+.hero {
+  padding-top: clamp(68px, 8.4vw, 153px);
+  padding-bottom: clamp(90px, 10.6vw, 193px);
+}
+
+.photo-gallery {
+  width: 78%;
+  max-width: 1420px;
+  aspect-ratio: 3 / 1;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  overflow: visible;
+  border-radius: 5px;
+}
+
+.photo-gallery img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  min-width: 0;
+}
+
+.photo-gallery img:first-child {
+  border-radius: 5px 0 0 5px;
+}
+
+.photo-gallery img:last-child {
+  border-radius: 0 5px 5px 0;
+}
+
+.photo-gallery .featured-photo {
+  position: relative;
+  z-index: 1;
+  border: clamp(4px, 0.45vw, 8px) solid var(--ink);
+  border-radius: 4px;
+}
+
+.hero-copy {
+  margin: clamp(34px, 3.8vw, 70px) var(--page-gutter) 0;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: clamp(20px, 2.1vw, 38px);
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.hero-copy h1 {
+  margin: 0;
+  font-size: clamp(20px, 2.1vw, 38px);
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.categories {
+  padding: clamp(18px, 1.4vw, 26px) 1.5% clamp(42px, 4.7vw, 86px);
+  background: var(--category-gray);
+  color: var(--paper);
+}
+
+.categories h2 {
+  margin: 0;
+  font-size: clamp(25px, 2.45vw, 45px);
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.category-list {
+  margin: clamp(24px, 2.6vw, 48px) 2.8% 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 11vw;
+  row-gap: clamp(20px, 2.25vw, 42px);
+}
+
+/* Kategori sengaja berupa label statis, bukan tombol atau tautan. */
+.category-label {
+  display: block;
+  padding: clamp(5px, 0.52vw, 10px) 7px;
+  background: #050505;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  font-size: clamp(14px, 1.95vw, 36px);
+  line-height: 1.18;
+  font-weight: 700;
+}
+
+.site-footer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(160px, 0.28fr);
+  column-gap: 7%;
+  padding: clamp(25px, 2.2vw, 41px) 2.3% 32px;
+  background: var(--paper);
+}
+
+.footer-title {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 1vw, 19px);
+  margin-bottom: 18px;
+}
+
+.small-logo {
+  flex: 0 0 auto;
+  width: clamp(34px, 3.3vw, 60px);
+}
+
+.chevron {
+  font-family: Arial, sans-serif;
+  font-size: clamp(36px, 3.5vw, 64px);
+  line-height: 0.7;
+  transform: translateY(-2px);
+}
+
+.footer-title h2 {
+  margin: 0;
+  font-size: clamp(16px, 1.55vw, 28px);
+  line-height: 1.2;
+}
+
+.about-text {
+  max-width: 870px;
+  margin: 0 0 0 12px;
+  font-size: clamp(12px, 0.72vw, 14px);
+  line-height: 1.58;
+  font-weight: 700;
+}
+
+.socials {
+  padding-top: clamp(18px, 2.7vw, 50px);
+}
+
+.socials h2 {
+  margin: 0 0 18px;
+  font-size: clamp(11px, 0.7vw, 14px);
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0 0 14px;
+  font-size: clamp(11px, 0.65vw, 13px);
+  font-weight: 700;
+}
+
+.social-item svg {
+  flex: 0 0 auto;
+  width: clamp(19px, 1.45vw, 27px);
+  height: clamp(19px, 1.45vw, 27px);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.social-item .solid {
+  fill: currentColor;
+  stroke: none;
+}
+
+.social-item .facebook-mark {
+  fill: currentColor;
+  stroke: var(--paper);
+  stroke-width: 0.65;
+}
+
+@media (max-width: 900px) {
+  .category-list {
+    column-gap: 4vw;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+  }
+
+  .category-label {
+    white-space: normal;
+  }
+
+  .site-footer {
+    grid-template-columns: minmax(0, 1fr) minmax(130px, 0.35fr);
+    column-gap: 4%;
+  }
+
+  .about-text {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --page-gutter: 5%;
+  }
+
+  body {
+    border-width: 1px;
+  }
+
+  .site-header {
+    min-height: 84px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-bottom-width: 1px;
+  }
+
+  .header-name {
+    font-size: 21px;
+  }
+
+  .hero {
+    padding-top: 48px;
+    padding-bottom: 62px;
+  }
+
+  .photo-gallery {
+    width: 90%;
+    aspect-ratio: 1.55 / 1;
+  }
+
+  .photo-gallery img {
+    object-position: center;
+  }
+
+  .photo-gallery .featured-photo {
+    border-width: 3px;
+  }
+
+  .hero-copy {
+    margin-top: 30px;
+  }
+
+  .eyebrow,
+  .hero-copy h1 {
+    font-size: 20px;
+  }
+
+  .categories {
+    padding: 18px 5% 35px;
+  }
+
+  .categories h2 {
+    font-size: 28px;
+  }
+
+  .category-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: 22px 0 0;
+    gap: 14px 12px;
+  }
+
+  .category-label {
+    padding: 8px 5px;
+    font-size: 14px;
+  }
+
+  .site-footer {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    padding: 26px 5% 30px;
+  }
+
+  .footer-title {
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .footer-title h2 {
+    font-size: 18px;
+  }
+
+  .about-text {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .socials {
+    padding-top: 0;
+  }
+
+  .socials h2 {
+    margin-bottom: 13px;
+  }
+
+  .social-item {
+    margin-bottom: 12px;
+  }
+}
